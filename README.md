@@ -26,6 +26,16 @@ This project implements a Dragon Treasures API resource, built using ASP.NET Web
 | PATCH | `/api/treasures/{id}` | Partially update a treasure |
 | DELETE | `/api/treasures/{id}` | Delete a treasure |
 
+### Swagger UI Interface
+![Swagger UI Interface](assets/images/SwaggerUI-1.png)
+![Swagger UI Interface](assets/images/SwaggerUI-2.png)
+![Swagger UI Interface](assets/images/SwaggerUI-3.png)
+![Swagger UI Interface](assets/images/SwaggerUI-4.png)
+
+###Default API docs
+![Default API docs](assets/images/defaultApiDocument-1.png)
+![Default API docs](assets/images/defaultApiDocument-1.png)
+
 ## Query Parameters
 
 ### GET `/api/treasures`
