@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WebApplication2</name>
+    </assembly>
+    <members>
+        <member name="T:WebApplication2.DragonTreasure">
+ <summary>
+     A rare and valuable treasure owned by a dragon.
+   </summary>
+   </member>
+    <member name="P:WebApplication2.DragonTreasure.Id">
+  <summary>
+            The unique identifier for the treasure.
+       </summary>
+        </member>
+        <member name="P:WebApplication2.DragonTreasure.Name">
+         <summary>
+    The name of the treasure (2-50 characters).
+         </summary>
+        </member>
+        <member name="P:WebApplication2.DragonTreasure.Description">
+ <summary>
+      A detailed description of the treasure.
+        </summary>
+        </member>
+        <member name="P:WebApplication2.DragonTreasure.Value">
+    <summary>
+            The estimated value of this treasure, in gold coins.
+            </summary>
+        </member>
+        <member name="P:WebApplication2.DragonTreasure.CoolFactor">
+   <summary>
+     A rating of how cool this treasure is (0-10).
+       </summary>
+    </member>
+  <member name="P:WebApplication2.DragonTreasure.PlunderedAt">
+            <summary>
+            The date and time when this treasure was plundered.
+     </summary>
+      </member>
+        <member name="P:WebApplication2.DragonTreasure.IsPublished">
+    <summary>
+            Whether this treasure is published and visible to the public.
+      </summary>
+        </member>
+        <member name="P:WebApplication2.DragonTreasure.Owner">
+            <summary>
+            The username of the dragon who owns this treasure.
+       </summary>
+ </member>
+        <member name="T:WebApplication2.TreasuresController">
+    <summary>
+            API controller for managing dragon treasures.
+            Provides CRUD operations and search functionality for rare and valuable treasures.
+     </summary>
+      </member>
+        <member name="M:WebApplication2.TreasuresController.GetTreasures(System.Int32,System.Int32,System.String,System.String,System.Boolean)">
+            <summary>
+   Gets all published treasures with optional pagination and search.
+       </summary>
+     <param name="page">Page number (default: 1).</param>
+            <param name="pageSize">Items per page (default: 10, max: 50).</param>
+         <param name="search">Search query to filter by name or description.</param>
+   <param name="owner">Filter by owner username (partial match).</param>
+    <param name="publishedOnly">Whether to return only published treasures (default: true).</param>
+     <returns>A list of dragon treasures.</returns>
+        </member>
+        <member name="M:WebApplication2.TreasuresController.GetTreasure(System.Int32)">
+       <summary>
+  Gets a specific treasure by its ID.
+         </summary>
+    <param name="id">The treasure ID.</param>
+       <returns>The requested treasure or 404 if not found.</returns>
+ </member>
+        <member name="M:WebApplication2.TreasuresController.GetTreasuresByOwner(System.String)">
+ <summary>
+      Gets treasures owned by a specific dragon.
+   </summary>
+     <param name="ownerName">The owner's username.</param>
+            <returns>A list of treasures owned by the specified dragon.</returns>
+        </member>
+      <member name="M:WebApplication2.TreasuresController.PostTreasure(WebApplication2.DragonTreasure)">
+     <summary>
+            Creates a new treasure.
+            </summary>
+            <param name="treasure">The treasure data to create.</param>
+         <returns>The created treasure with assigned ID.</returns>
+        </member>
+        <member name="M:WebApplication2.TreasuresController.PutTreasure(System.Int32,WebApplication2.DragonTreasure)">
+        <summary>
+Updates an existing treasure.
+   </summary>
+  <param name="id">The treasure ID to update.</param>
+        <param name="treasure">The updated treasure data.</param>
+   <returns>The updated treasure or 404 if not found.</returns>
+        </member>
+        <member name="M:WebApplication2.TreasuresController.DeleteTreasure(System.Int32)">
+       <summary>
+     Deletes a treasure.
+        </summary>
+            <param name="id">The treasure ID to delete.</param>
+            <returns>204 No Content if successful, 404 if not found.</returns>
+        </member>
+  <member name="M:WebApplication2.TreasuresController.GetStats">
+        <summary>
+            Gets treasure statistics.
+ </summary>
+            <returns>Statistics about treasures in the collection.</returns>
+        </member>
+    </members>
+</doc>
